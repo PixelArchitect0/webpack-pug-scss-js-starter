@@ -1,13 +1,20 @@
+extends @views/layouts/default
+
 block variables
   - title = 'Contacts'
 
+append style
+  link(rel='stylesheet' href='./styles.scss')
+
+block content
+  section
 doctype html
 html(lang="en")
   head
     title Contacts
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel='stylesheet' href='./styles.scss')
+    link(rel="stylesheet", href="/styles.css")
   body
     header
       h1 Contact Us
@@ -29,5 +36,9 @@ html(lang="en")
         div
           button(type="submit") Send
 
+    footer
+      p &copy; 2025 Your Company
 
-
+  h1.center-x Markdown
+    .markdown-body
+      include:contacts ./README.md
